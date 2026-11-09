@@ -1,0 +1,31 @@
+# ROS2 build, install, and log folders
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VSCode settings (optional)
+.vscode/
+
+# Node modules and build output (for dashboard projects)
+Robot-dashboard/node_modules/
+Robot-dashboard/.next/
+Robot-dashboard/dist/
+Robot-dashboard/out/
+Robot-dashboard/.env
+Robot-dashboard/.env.local
+Robot-dashboard/.env.*
+!Robot-dashboard/.env.example
+
+Robot-dashbord-laserscan-vite/node_modules/
+Robot-dashbord-laserscan-vite/dist/
+Robot-dashbord-laserscan-vite/.env
+Robot-dashbord-laserscan-vite/.env.local
+Robot-dashbord-laserscan-vite/.env.*
+!Robot-dashbord-laserscan-vite/.env.example
+
+# OS/Editor files
+.DS_Store

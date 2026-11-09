@@ -1,0 +1,9 @@
+    // parameters
+    std::string host = params.param("host", std::string("192.168.11.11"), "Host to connect to").declare().value();
+    int port = params.param("port", 1445, "TCP port to connect to").declare().value();
+    std::string frame_id = params.param("frame_id", std::string("laser"), "Frame to use for the published messages").declare().value();
+    float rate = params.param("rate", 20.0, "Publish rate").declare().value();
+
+    // dynamic parameters
+    auto min_range = params.param("min_range", 0.0, "Min sensor range in meters").min(0.0).max(10.0).dynamic().declare();
+    auto max_range = params.param("max_range", 40.0, "Max sensor range in meters").min(1.0).max(100.0).dynamic().declare();

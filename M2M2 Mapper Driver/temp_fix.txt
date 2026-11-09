@@ -1,0 +1,15 @@
+    // parameters
+    auto host_param = params.param("host", std::string("192.168.11.11"), "Host to connect to");
+    auto port_param = params.param("port", 1445, "TCP port to connect to");
+    auto frame_id_param = params.param("frame_id", std::string("laser"), "Frame to use for the published messages");
+    auto rate_param = params.param("rate", 20.0, "Publish rate");
+
+    // Extract values
+    std::string host = host_param.value();
+    int port = port_param.value(); 
+    std::string frame_id = frame_id_param.value();
+    float rate = rate_param.value();
+
+    // dynamic parameters with proper API
+    auto min_range_param = params.param("min_range", 0.0, "Min sensor range in meters");
+    auto max_range_param = params.param("max_range", 40.0, "Max sensor range in meters");
